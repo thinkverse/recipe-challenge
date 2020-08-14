@@ -1,5 +1,7 @@
 ## Recipe Page Challenge
 
+![Travis](https://img.shields.io/travis/com/thinkverse/recipe-challenge)
+
 Recipe Page Challenge from [devchallenges.io]
 
 ### Challenge
