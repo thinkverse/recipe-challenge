@@ -4,6 +4,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': 'https://recipe-challenge.netlify.app',
+        'Access-Control-Allow-Origin': '*recipe-challenge.netlify.app',
         'Access-Control-Allow-Origin': 'http://localhost:8888'
       },
       body: JSON.stringify({
