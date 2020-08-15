@@ -12,11 +12,17 @@
     font-size: 1.5rem;
 }
 
+
+/* Simulate flexbox gap */
+.description > span + p,
+.meta__item > i + div {
+    margin-left: 0.5rem;
+}
+
 .description {
     margin-bottom: 1.5rem;
     flex-direction: row;
     display: flex;
-    gap: 0.5rem;
 }
 
 .description .material-icons {
@@ -60,7 +66,6 @@
     font-size: 0.7rem;
     color: #333333;
     display: flex;
-    gap: 0.5rem;
 }
 
 .meta__item--full {
