@@ -1,0 +1,82 @@
+.recipe {
+    padding: 0 0.7rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    font-family: 'Playfair Display', zGeorgia, 'Times New Roman', Times, serif;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.description {
+    margin-bottom: 1.5rem;
+    flex-direction: row;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.description .material-icons {
+    writing-mode: vertical-rl;
+    font-size: 1.2rem;
+    color: #C4C4C4;
+}
+
+.description p {
+    font-style: italic;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+    color: #4F4F4F;
+    width: 40ch;
+    margin: 0;
+}
+
+.cover-image {
+    margin: 0 0 1rem 0;
+    min-height: 160px;
+    min-width: 100%;
+    padding: 0;
+}
+
+.cover-image img {
+    border-radius: 12px;
+    object-fit: contain;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.meta {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    row-gap: 1rem;
+}
+
+.meta__item {
+    align-items: center;
+    font-size: 0.7rem;
+    color: #333333;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.meta__item--full {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: #F2994A;
+}
+
+.meta__item:not(.meta__item--full) .material-icons {
+    font-size: 1.4rem;
+    color: #4F4F4F;
+}
+
+.meta__body header {
+    text-transform: uppercase;
+    line-height: 0.9rem;
+    font-weight: bold;
+    color: #BDBDBD;
+}
