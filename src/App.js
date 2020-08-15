@@ -90,19 +90,22 @@ function App() {
                 <section className="ingredient">
                   { part.ingredient.map(val => {
                     return (
-                      <div>
-                        <span>{ val.units }</span>
-                        { val.weight ? (
-                          <span> ({ val.weight }g) </span>
-                        ) : ' ' }
-                        <ReactMarkdown source={ val.name.toLowerCase() } />
+                      <label>
+                        <input type="checkbox" className="checkbox" />
+                        <span>
+                          <span>{ val.units }</span>
+                          { val.weight ? (
+                            <span> ({ val.weight }g) </span>
+                          ) : ' ' }
+                          <ReactMarkdown source={ val.name.toLowerCase() } />
 
-                        { val.meta?.info ? (
-                          <>&nbsp;
-                            <ReactMarkdown source={ val.meta?.info.toLowerCase() } />
-                          </>
-                        ): '' }
-                      </div>
+                          { val.meta?.info ? (
+                            <>&nbsp;
+                              <ReactMarkdown source={ val.meta?.info.toLowerCase() } />
+                            </>
+                          ): '' }
+                        </span>
+                      </label>
                     )
                   }) }
                 </section>

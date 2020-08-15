@@ -14,7 +14,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Simulate flexbox gap */
 .description > span + p,
-.meta__item > i + div {
+.meta__item > i + div,
+.ingredient label > input + span {
     margin-left: 0.5rem;
 }
 
@@ -103,10 +104,19 @@ h1, h2, h3, h4, h5, h6 {
 .ingredient {
     line-height: 1.5rem;
     font-size: 0.9rem;
+    display: grid;
 }
 
-.ingredient > div + div {
+.ingredient > label + label {
     margin-top: 0.7rem;
+}
+
+.ingredient label {
+    display: flex;
+}
+
+.ingredient .checkbox {
+    margin: 0.3rem 0;
 }
 
 .ingredient p {
