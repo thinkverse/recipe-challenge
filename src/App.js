@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 const api = 'https://recipe-challenge.netlify.app/.netlify/functions';
@@ -11,7 +12,6 @@ function App() {
       .then(response => response.json())
       .then(data => setResult({ loaded: true, recipe: data }))
   }, [])
-
   
   return (
     (result.loaded) ? (
@@ -20,7 +20,7 @@ function App() {
         <h1>{ result.recipe.title }</h1>
       </header>
       <aside className="description">
-        <span class="material-icons">
+        <span className="material-icons">
           drag_indicator
         </span>
         <p>{ result.recipe.description }</p>
@@ -73,6 +73,43 @@ function App() {
             </span>
           </div>
         </div>
+      </section>
+      <section className="ingredients">
+        <header>
+          <h2>Ingredients</h2>
+        </header>
+        <main>
+          { result.recipe.ingredients.map(part => {
+            return (
+              <>
+                <header key={part.key}>
+                  <h3>
+                    <ReactMarkdown source={part.title} />
+                  </h3>
+                </header>
+                <section className="ingredient">
+                  { part.ingredient.map(val => {
+                    return (
+                      <div>
+                        <span>{ val.units }</span>
+                        { val.weight ? (
+                          <span> ({ val.weight }g) </span>
+                        ) : ' ' }
+                        <ReactMarkdown source={ val.name.toLowerCase() } />
+
+                        { val.meta?.info ? (
+                          <>&nbsp;
+                            <ReactMarkdown source={ val.meta?.info.toLowerCase() } />
+                          </>
+                        ): '' }
+                      </div>
+                    )
+                  }) }
+                </section>
+              </>
+            )
+          }) }
+        </main>
       </section>
     </div>
     ) : (
