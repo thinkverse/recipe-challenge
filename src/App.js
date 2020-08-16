@@ -78,7 +78,7 @@ function App() {
         <header>
           <h2>Ingredients</h2>
         </header>
-        <main>
+        <div>
           { result.recipe.ingredients.map(part => {
             return (
               <>
@@ -112,8 +112,11 @@ function App() {
               </>
             )
           }) }
-        </main>
+        </div>
       </section>
+      <footer>
+        <p>Thinkverse &copy; DevChallenges.io</p>
+      </footer>
     </div>
     ) : (
     <div className="app">
