@@ -29,7 +29,7 @@ function App() {
         <figure className="cover-image">
           <img src="./img/photo1.png" alt="{ result.recipe.title }" />
         </figure>
-        <article>
+        <article className="recipe__body">
           <aside className="meta">
             <div className="meta__item meta__item--full">
               <i className="material-icons">local_dining</i>

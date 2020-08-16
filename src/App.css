@@ -87,6 +87,10 @@ h1, h2, h3, h4, h5, h6,
     color: #BDBDBD;
 }
 
+.recipe__body > aside + section {
+    margin-top: 2rem;
+}
+
 .ingredients h2,
 .ingredients h3 {
     color: #333333;
@@ -122,6 +126,10 @@ h1, h2, h3, h4, h5, h6,
 
 .ingredient p {
     display: inline;
+}
+
+.instructions > header + ul {
+    margin-top: 2rem;
 }
 
 .instructions ul {
