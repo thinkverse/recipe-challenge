@@ -15,8 +15,8 @@ function App() {
   
   return (
     (result.loaded) ? (
-    <div className="app recipe">
-      <main>
+    <div className="app">
+      <main className="recipe">
         <header className="header">
           <h1>{ result.recipe.title }</h1>
         </header>
@@ -116,6 +116,23 @@ function App() {
               }) }
             </div>
           </section>
+          <section className="instructions">
+            <header>
+              <h2>Instructions</h2>
+            </header>
+            <ul>
+              { result.recipe.instructions.map(instruction => {
+                return (
+                  <li key={instruction.step} data-step={instruction.step}>
+                    <ReactMarkdown source={ instruction.body } />
+                  </li>
+                )
+              }) }
+            </ul>
+          </section>
+          <footer>
+            <p>Source: <a href={ result.recipe.source }>{ result.recipe.source }</a></p>
+          </footer>
         </article>
       </main>
       <footer>

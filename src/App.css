@@ -4,7 +4,8 @@
     margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.instructions ul li:before {
     font-family: 'Playfair Display', zGeorgia, 'Times New Roman', Times, serif;
 }
 
@@ -123,7 +124,53 @@ h1, h2, h3, h4, h5, h6 {
     display: inline;
 }
 
-.app > main > article,
+.instructions ul {
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+.instructions ul > li + li {
+    margin-top: 2rem;
+}
+
+.instructions ul li {
+    padding-left: calc(42px + 1rem);
+    position: relative;
+}
+
+.instructions ul li:before {
+    background-color: #F2994A;
+    content: attr(data-step);
+    justify-content: center;
+    position: absolute;
+    border-radius: 6px;
+    font-size: 1.7rem;
+    color: #FFFFFF;
+    display: flex;
+    height: 42px;
+    width: 42px;
+    left: 0;
+}
+
+.instructions ul li p {
+    line-height: 1.5rem;
+    width: 27ch;
+}
+
+.recipe > article > footer,
+.recipe > article > footer a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #BDBDBD;
+}
+
+.recipe > article > footer p {
+    flex-direction: column;
+    line-height: 1.2rem;
+    display: flex;
+}
+
+.recipe > article,
 .app > footer {
     margin-bottom: 2rem;
 }
@@ -141,6 +188,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #A9A9A9;
 }
 
-.app > footer a:hover {
+.app > footer a:hover ,
+.recipe > article > footer a:hover {
     text-decoration: underline;
 }
