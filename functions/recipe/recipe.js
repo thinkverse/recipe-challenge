@@ -4,7 +4,6 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': 'https://recipe-challenge.netlify.app',
-        'Access-Control-Allow-Origin': '*recipe-challenge.netlify.app',
         'Access-Control-Allow-Origin': 'http://localhost:8888'
       },
       body: JSON.stringify({
@@ -74,7 +73,7 @@ exports.handler = async (event, context) => {
               units: "2 teaspoons",
               weight: null,
               meta: {
-                info: "(optinal, but recommended)"
+                info: "(optional, but recommended)"
               }
             }, {
               name: "**Eggs**",
@@ -84,7 +83,7 @@ exports.handler = async (event, context) => {
                 info: "At room temperature"
               }
             }, {
-              name: "Topping suggestions",
+              name: "Topping suggestions:",
               units: null,
               weight: null,
               meta: {
