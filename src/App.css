@@ -170,7 +170,10 @@ h1, h2, h3, h4, h5, h6,
     display: flex;
 }
 
-.recipe > article,
+.recipe > article {
+    margin-bottom: 6rem;
+}
+
 .app > footer {
     margin-bottom: 2rem;
 }
