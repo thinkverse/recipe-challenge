@@ -81,8 +81,7 @@ function App() {
               <h2>Ingredients</h2>
             </header>
             <div>
-              { result.recipe.ingredients.map(part => {
-                return (
+              { result.recipe.ingredients.map(part => (
                   <>
                     <header key={part.key}>
                       <h3>
@@ -90,8 +89,7 @@ function App() {
                       </h3>
                     </header>
                     <section className="ingredient">
-                      { part.ingredient.map(val => {
-                        return (
+                      { part.ingredient.map(val => (
                           <label>
                             <input type="checkbox" className="checkbox" />
                             <span>
@@ -109,11 +107,11 @@ function App() {
                             </span>
                           </label>
                         )
-                      }) }
+                      ) }
                     </section>
                   </>
                 )
-              }) }
+              ) }
             </div>
           </section>
           <section className="instructions">
@@ -121,13 +119,12 @@ function App() {
               <h2>Instructions</h2>
             </header>
             <ul>
-              { result.recipe.instructions.map(instruction => {
-                return (
+              { result.recipe.instructions.map(instruction => (
                   <li key={instruction.step} data-step={instruction.step}>
                     <ReactMarkdown source={ instruction.body } />
                   </li>
                 )
-              }) }
+              ) }
             </ul>
           </section>
           <footer>
