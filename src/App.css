@@ -130,3 +130,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
     width: 100%;
 }
+
+.app > footer a {
+    text-decoration: none;
+    color: #A9A9A9;
+}
+
+.app > footer a:hover {
+    text-decoration: underline;
+}

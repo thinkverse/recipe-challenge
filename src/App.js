@@ -115,7 +115,7 @@ function App() {
         </div>
       </section>
       <footer>
-        <p>Thinkverse &copy; DevChallenges.io</p>
+        <p>Thinkverse &copy; <a href="https://devchallenges.io">DevChallenges.io</a></p>
       </footer>
     </div>
     ) : (
