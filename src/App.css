@@ -79,6 +79,10 @@ h1, h2, h3, h4, h5, h6,
     color: #F2994A;
 }
 
+.meta__item:not(.meta__item--full) {
+    font-weight: bold;
+}
+
 .meta__item:not(.meta__item--full) .material-icons {
     font-size: 1.4rem;
     color: #4F4F4F;
@@ -87,6 +91,7 @@ h1, h2, h3, h4, h5, h6,
 .meta__body header {
     text-transform: uppercase;
     line-height: 0.9rem;
+    font-size: 0.6rem;
     font-weight: bold;
     color: #BDBDBD;
 }
@@ -252,7 +257,7 @@ h1, h2, h3, h4, h5, h6,
     }
     
     .recipe__body .meta--wrapper > div + div {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
 
     .meta__item .material-icons,
@@ -261,8 +266,23 @@ h1, h2, h3, h4, h5, h6,
     }
 
     .recipe__body .meta__body span {
-        line-height: 1.5rem;
+        line-height: 1.1rem;
         font-size: 0.9rem;
+    }
+
+    .recipe__body .meta__body header {
+        line-height: 1.2rem;
+        font-size: 0.6rem;
+    }
+
+    .meta__item > i + div {
+        margin-left: 0.9rem;
+    }
+
+    .meta__item,
+    .meta__item:not(.meta__item--full) {
+        align-items: center;
+        font-weight: 500;
     }
 
     .recipe__body .ingredients,
@@ -274,6 +294,7 @@ h1, h2, h3, h4, h5, h6,
     .recipe__body .instructions p {
         width: auto;
     }
+
     .ingredients h2 {
         font-size: 1.5rem;
     }
