@@ -172,6 +172,7 @@ h1, h2, h3, h4, h5, h6,
 .recipe > article > footer,
 .recipe > article > footer a {
     text-decoration: none;
+    font-style: italic;
     font-size: 0.8rem;
     color: #BDBDBD;
 }
@@ -288,7 +289,7 @@ h1, h2, h3, h4, h5, h6,
 
     .recipe > article > footer p,
     .recipe > article > footer p a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
 }
