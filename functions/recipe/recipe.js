@@ -19,10 +19,10 @@ exports.handler = async (event, context) => {
               units: "1 and 1/2 cups",
               weight: 150,
               meta: {
-                info: "About 10 full sheet graham crackers"
+                info: "(About 10 full sheet graham crackers)"
               }
             }, {
-              name: "**Unstalted Butter**",
+              name: "**Unstalted Butter,**",
               units: "5 Tablespoons",
               weight: 70,
               meta: {
@@ -41,7 +41,7 @@ exports.handler = async (event, context) => {
             key: "cheesecake",
             title: "*Cheesecake*",
             ingredient: [{
-              name: "Full-fat **Cream Cheese**",
+              name: "Full-fat **Cream Cheese,**",
               units: "Four 8-ounce blocks",
               weight: 904,
               meta: {
@@ -55,7 +55,7 @@ exports.handler = async (event, context) => {
                 info: null
               }
             }, {
-              name: "Full-fat **Sour Cream**",
+              name: "Full-fat **Sour Cream,**",
               units: "1 cup",
               weight: 240,
               meta: {
