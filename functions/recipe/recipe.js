@@ -42,7 +42,7 @@ exports.handler = async (event, context) => {
             title: "*Cheesecake*",
             ingredient: [{
               name: "Full-fat **Cream Cheese,**",
-              units: "Four 8-ounce blocks",
+              units: "four 8-ounce blocks",
               weight: 904,
               meta: {
                 info: "Softened to room temperature"
