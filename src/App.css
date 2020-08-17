@@ -56,7 +56,11 @@ h1, h2, h3, h4, h5, h6,
     margin: 0;
 }
 
-.meta {
+.recipe__body {
+    display: grid;
+}
+
+.meta--wrapper {
     grid-template-columns: repeat(3, 1fr);
     display: grid;
     row-gap: 1rem;
@@ -202,4 +206,89 @@ h1, h2, h3, h4, h5, h6,
 .app > footer a:hover ,
 .recipe > article > footer a:hover {
     text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+    .app {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .header h1 {
+        line-height: 2rem;
+        font-size: 3rem;
+    }
+
+    .description p {
+        line-height: 1.2rem;
+        font-size: 0.9rem;
+        width: 62ch;
+    }
+
+    .recipe__body {
+        grid-template-columns: 1fr 220px;
+    }
+
+    .recipe__body > aside + section {
+        margin: 0;
+    }
+
+    .recipe__body .meta {
+        flex-direction: column;
+        margin-top: 2rem;
+        grid-column: 2;
+        display: flex;
+        min-height: 0;
+        grid-row: 1;
+    }
+
+    .recipe__body .meta--wrapper {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+        flex-direction: column;
+        border-radius: 12px;
+        display: flex;
+        padding: 2rem;
+    }
+    
+    .recipe__body .meta--wrapper > div + div {
+        margin-top: 1.5rem;
+    }
+
+    .meta__item .material-icons,
+    .meta__item:not(.meta__item--full) .material-icons {
+        font-size: 2rem;
+    }
+
+    .recipe__body .meta__body span {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .recipe__body .ingredients,
+    .recipe__body .instructions,
+    .recipe__body footer {
+        grid-column: 1;
+    }
+
+    .recipe__body .instructions p {
+        width: auto;
+    }
+    .ingredients h2 {
+        font-size: 1.5rem;
+    }
+
+    .ingredients h3 {
+        font-size: 1.3rem;
+    }
+
+    .recipe > article > footer p {
+        flex-direction: row;
+        gap: 0.3rem;
+    }
+
+    .recipe > article > footer p,
+    .recipe > article > footer p a {
+        font-size: 0.9rem;
+    }
+    
 }

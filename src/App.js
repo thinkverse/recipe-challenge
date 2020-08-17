@@ -31,48 +31,50 @@ function App() {
         </figure>
         <article className="recipe__body">
           <aside className="meta">
-            <div className="meta__item meta__item--full">
-              <i className="material-icons">local_dining</i>
-              <div className="meta__body">
-                <header>
-                  Yields
-                </header>
-                <span itemprop="recipeYield">
-                  { result.recipe.meta.yields } Servings
-                </span>
+            <div className="meta--wrapper">
+              <div className="meta__item meta__item--full">
+                <i className="material-icons">local_dining</i>
+                <div className="meta__body">
+                  <header>
+                    Yields
+                  </header>
+                  <span itemprop="recipeYield">
+                    { result.recipe.meta.yields } Servings
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="meta__item">
-              <i className="material-icons">schedule</i>
-              <div className="meta__body">
-                <header>
-                  Prep time
-                </header>
-                <span itemProp="prepTime">
-                  { result.recipe.meta.prep } minutes
-                </span>
+              <div className="meta__item">
+                <i className="material-icons">schedule</i>
+                <div className="meta__body">
+                  <header>
+                    Prep time
+                  </header>
+                  <span itemProp="prepTime">
+                    { result.recipe.meta.prep } minutes
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="meta__item">
-              <i className="material-icons">schedule</i>
-              <div className="meta__body">
-                <header>
-                  Cook time
-                </header>
-                <span itemprop="cookTime">
-                  { result.recipe.meta.cook / 60 } hour
-                </span>
+              <div className="meta__item">
+                <i className="material-icons">schedule</i>
+                <div className="meta__body">
+                  <header>
+                    Cook time
+                  </header>
+                  <span itemprop="cookTime">
+                    { result.recipe.meta.cook / 60 } hour
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="meta__item">
-              <i className="material-icons">schedule</i>
-              <div className="meta__body">
-                <header>
-                  Total time
-                </header>
-                <span>
-                  { result.recipe.meta.total / 60 } hours
-                </span>
+              <div className="meta__item">
+                <i className="material-icons">schedule</i>
+                <div className="meta__body">
+                  <header>
+                    Total time
+                  </header>
+                  <span>
+                    { result.recipe.meta.total / 60 } hours
+                  </span>
+                </div>
               </div>
             </div>
           </aside>
