@@ -16,18 +16,18 @@ function App() {
   return (
     (result.loaded) ? (
     <div className="app">
-      <main className="recipe">
-        <header className="header">
+      <main className="recipe" itemscope itemtype="http://schema.org/Recipe">
+        <header className="header" itemprop="name">
           <h1>{ result.recipe.title }</h1>
         </header>
         <aside className="description">
           <span className="material-icons">
             drag_indicator
           </span>
-          <p>{ result.recipe.description }</p>
+          <p itemprop="description">{ result.recipe.description }</p>
         </aside>
         <figure className="cover-image">
-          <img src="./img/photo1.png" alt="{ result.recipe.title }" />
+          <img src="./img/photo1.png" alt="{ result.recipe.title }" itemprop="image" />
         </figure>
         <article className="recipe__body">
           <aside className="meta">
@@ -37,7 +37,7 @@ function App() {
                 <header>
                   Yields
                 </header>
-                <span>
+                <span itemprop="recipeYield">
                   { result.recipe.meta.yields } Servings
                 </span>
               </div>
@@ -48,7 +48,7 @@ function App() {
                 <header>
                   Prep time
                 </header>
-                <span>
+                <span itemProp="prepTime">
                   { result.recipe.meta.prep } minutes
                 </span>
               </div>
@@ -59,7 +59,7 @@ function App() {
                 <header>
                   Cook time
                 </header>
-                <span>
+                <span itemprop="cookTime">
                   { result.recipe.meta.cook / 60 } hour
                 </span>
               </div>
@@ -92,7 +92,7 @@ function App() {
                       { part.ingredient.map(val => (
                           <label>
                             <input type="checkbox" className="checkbox" />
-                            <span>
+                            <span itemprop="recipeIngredient">
                               <span>{ val.units }</span>
                               { val.weight ? (
                                 <span> ({ val.weight }g) </span>
@@ -120,7 +120,7 @@ function App() {
             </header>
             <ul>
               { result.recipe.instructions.map(instruction => (
-                  <li key={instruction.step} data-step={instruction.step}>
+                  <li key={instruction.step} data-step={instruction.step} itemprop="recipeInstructions" itemprop="position" content={instruction.step}>
                     <ReactMarkdown source={ instruction.body } />
                   </li>
                 )
