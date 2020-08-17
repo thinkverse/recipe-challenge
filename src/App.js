@@ -120,7 +120,7 @@ function App() {
             </header>
             <ul>
               { result.recipe.instructions.map(instruction => (
-                  <li key={instruction.step} data-step={instruction.step} itemprop="recipeInstructions" itemprop="position" content={instruction.step}>
+                  <li key={instruction.step} data-step={instruction.step} itemprop="recipeInstructions">
                     <ReactMarkdown source={ instruction.body } />
                   </li>
                 )
