@@ -5,7 +5,7 @@
 }
 
 h1, h2, h3, h4, h5, h6,
-.instructions ul li:before {
+.instructions ol li:before {
     font-family: 'Playfair Display', zGeorgia, 'Times New Roman', Times, serif;
 }
 
@@ -128,25 +128,25 @@ h1, h2, h3, h4, h5, h6,
     display: inline;
 }
 
-.instructions > header + ul {
+.instructions > header + ol {
     margin-top: 2rem;
 }
 
-.instructions ul {
+.instructions ol {
     margin: 0; padding: 0;
     list-style: none;
 }
 
-.instructions ul > li + li {
+.instructions ol > li + li {
     margin-top: 2rem;
 }
 
-.instructions ul li {
+.instructions ol li {
     padding-left: calc(42px + 1rem);
     position: relative;
 }
 
-.instructions ul li:before {
+.instructions ol li:before {
     background-color: #F2994A;
     content: attr(data-step);
     justify-content: center;
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6,
     left: 0;
 }
 
-.instructions ul li p {
+.instructions ol li p {
     line-height: 1.5rem;
     width: 27ch;
 }

@@ -118,14 +118,14 @@ function App() {
             <header>
               <h2>Instructions</h2>
             </header>
-            <ul>
+            <ol>
               { result.recipe.instructions.map(instruction => (
                   <li key={instruction.step} data-step={instruction.step} itemprop="recipeInstructions">
                     <ReactMarkdown source={ instruction.body } />
                   </li>
                 )
               ) }
-            </ul>
+            </ol>
           </section>
           <footer>
             <p>Source: <a href={ result.recipe.source }>{ result.recipe.source }</a></p>
