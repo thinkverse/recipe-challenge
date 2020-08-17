@@ -139,8 +139,8 @@ function App() {
       </footer>
     </div>
     ) : (
-    <div className="app">
-      LOADING
+    <div className="loading">
+      <p>LOADING</p>
     </div>
     )
   );

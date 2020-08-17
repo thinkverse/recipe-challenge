@@ -5,5 +5,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FAFAFA;
+  height: 100%;
   margin: 0;
+}
+
+#root {
+  height: 100%;
 }
